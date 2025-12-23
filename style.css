@@ -22,12 +22,45 @@ body::before {
   content: "";
   position: fixed;
   inset: -25%;
-  background-image: url("images/background.png");
-  background-size: cover;
-  background-position: center;
   transform: rotate(90deg);
   transform-origin: center;
   z-index: -2;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Image behavior */
+.hero img {
+  opacity: 0.5;
+  filter: saturate(70%) contrast(90%);
+  width: 100%;
+  height: auto;
+  display: block;
+
+  /* rotation */
+  transform: rotate(90deg);
+  transform-origin: center;
+
+  /* prevent blur */
+  image-rendering: auto;
+}
+
+/* Create scroll space */
+.hero {
+  min-height: 200vh;
+}
+@media (max-width: 768px) {
+  .hero img {
+    transform: none;
+  }
 }
 
 
