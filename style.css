@@ -9,7 +9,7 @@
 * {
   box-sizing: border-box;
 }
-
+/* Rotated background layer */
 body {
   margin: 0;
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
@@ -29,4 +29,5 @@ body::before {
   transform-origin: center;
   z-index: -2;
 }
+
 
