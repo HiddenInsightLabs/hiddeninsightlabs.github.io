@@ -36,6 +36,39 @@ html, body {
   width: 100%;
   overflow: hidden;
 }
+.hero {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+/* Background image */
+.hero-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: auto;
+  transform: translate(-50%, -50%) rotate(90deg);
+  opacity: 0.45;
+  filter: saturate(70%) contrast(90%);
+  z-index: -1;
+}
+
+/* Text layer */
+.hero-content {
+  max-width: 720px;
+}
+
+/* Mobile: remove rotation */
+@media (max-width: 768px) {
+  .hero-bg {
+    transform: translate(-50%, -50%);
+    width: 140%;
+  }
+}
 
 /* Image behavior */
 .hero img {
@@ -62,5 +95,6 @@ html, body {
     transform: none;
   }
 }
+
 
 
